@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+     <bean id="infoBean" class="org.cheng.spring.InfoBean">
+     	<!-- <property name="res" value="file:\D:\javaTest\发送的邮箱\12_31.txt"/> -->
+     	
+     	<property name="res" value="https://yjs.nuist.edu.cn/"/>
+     	<property name="charSet"  value="utf-8" /> 
+     </bean>
+     
+     <bean  
+      id="messageSource"
+      class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+      <property name="basenames">
+        <list>
+          <value>mess</value>
+         </list>
+      </property>
+      </bean>
+</beans>
